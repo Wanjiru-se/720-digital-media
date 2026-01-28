@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>720 Digital Media | The Digital Powerhouse</title>
+  <meta name="description" content="720 Digital Media is a full-service digital agency where creativity, strategy, and technology connect to transform brands." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<script>
+  const track = document.getElementById("workTrack");
+  const prev = document.querySelector(".work-prev");
+  const next = document.querySelector(".work-next");
+
+  function cardWidth() {
+    const card = track.querySelector(".work-card");
+    const gap = 18; // must match CSS gap
+    return card ? card.getBoundingClientRect().width + gap : 340;
+  }
+
+  prev.addEventListener("click", () => {
+    track.scrollBy({ left: -cardWidth(), behavior: "smooth" });
+  });
+
+  next.addEventListener("click", () => {
+    track.scrollBy({ left: cardWidth(), behavior: "smooth" });
+  });
+</script>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <img src="Assets/Logos/720.png" alt="720 Digital Media" class="brand-logo">
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a class="btn btn-primary" href="#contact">Let’s Talk</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero hero-band">
+      <div class="hero-band-bg"></div>
+      <div class="hero-band-vignette"></div>
+      <div class="container hero-grid center-hero">
+        <div>
+          <p class="kicker">The Digital Powerhouse</p>
+          <h1>Twice the perspective.<br>
+              Twice the creativity. Real results.</h1>
+          <p class="hero-subtext">
+            We help ideas move, scale, and connect.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">Let’s Talk</a>
+            <a class="btn btn-secondary" href="services.html">Our Services</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="work-slider-section">
+  <div class="container">
+    <h2 class="section-title">About Us</h2>
+    <p class="section-subtitle">
+      A focused process designed for real-world results..
+    </p>
+
+    <div class="work-slider">
+      <button class="work-nav work-prev" type="button" aria-label="Previous">
+        ‹
+      </button>
+
+      <div class="work-track" id="workTrack">
+        <article class="work-card">
+          <div class="work-icon">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 7 L15 12 L12 17 L9 12 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>   
+            </svg>
+          </div>  
+            
+          <h3>Strategy</h3>
+          <p>We align goals, audience, and messaging to guide every decision with clarity.</p>
+        </article>
+
+        <article class="work-card">
+          <div class="work-icon">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+              <path d="M12 3 L14 9 L20 11 L14 13 L12 19 L10 13 L4 11 L10 9 Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"/>         
+            </svg>
+          </div>
+
+          <h3>Creativity</h3>
+          <p>We design content and visuals that feel premium, consistent, and memorable.</p>
+        </article>
+
+        <article class="work-card">
+          <div class="work-icon">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+              <rect x="4" y="5" width="16" height="11" rx="2"
+              fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 19 H22" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+
+          <h3>Development</h3>
+          <p>We build fast, clean digital experiences that work smoothly across devices.</p>
+        </article>
+
+        <article class="work-card">
+          <div class="work-icon">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"
+              fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 13 L11 10 L14 12 L17 9"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <h3>Analytics</h3>
+          <p>We track performance, learn what works, and optimize for real growth.</p>
+        </article>
+      </div>
+
+      <button class="work-nav work-next" type="button" aria-label="Next">
+        ›
+      </button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- SERVICES (placeholder — you’ll add product lines + subsidiaries later) -->
+     <!--<main class="services-page">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Services</h1>
+      <p>
+        We design, build, and grow digital products with clarity and intention.
+      </p>
+    </div>
+  </section>
+
+  <section class="services-content">
+    <div class="container">
+      
+    </div>
+  </section>
+</main>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p class="muted">
+            This is a clean placeholder for now. You’ll add the full product lines + subsidiaries on this section later.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Create</h3>
+            <p>Photography, video, design, and production built for modern platforms.</p>
+          </div>
+          <div class="card">
+            <h3>Grow</h3>
+            <p>Campaign strategy, performance marketing, content, and reporting that drives action.</p>
+          </div>
+          <div class="card">
+            <h3>Build</h3>
+            <p>Web experiences and optimization that help your brand show up better online.</p>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="card">
+          <h3>Coming soon in this section</h3>
+          <ul class="checklist">
+            <li>Product lines breakdown</li>
+            <li>Subsidiaries overview</li>
+            <li>Mini portfolio highlights</li>
+            <li>Process & FAQs</li>
+          </ul>
+          <div class="section-foot">
+            <a class="btn btn-primary" href="#contact">Let’s Talk</a>
+            <a class="btn btn-ghost" href="#call">Book a Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  -->
+
+  <section class="collabs" id="collabs" aria-label="Selected collaborations and clients">
+  <div class="collabs-inner">
+
+    <header class="collabs-header">
+      <h2>Selected collaborations & clients</h2>
+    </header>
+
+    <div class="collabs-divider" aria-hidden="true"></div>
+
+    <!-- Logo wall -->
+    <div class="logo-wall" role="list" aria-label="Client logos">
+      <!-- If you have real logos, replace these with <img> tags -->
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/bbc.png" alt="BBC" class="logo-img">
+      </div>
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/spotify.png" alt="Spotify" class="logo-img">
+      </div>
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/koda.png" alt="Koda" class="logo-img logo-lg">
+      </div>
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/gondwanakomplex.png" alt="Gondwanakomplex" class="logo-img logo-lg">
+      </div>
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/descendants2.jpg" alt="descendants" class="logo-img logo-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Get In Touch With Us</h2>
+          <p class="muted">Send an inquiry or jump straight to a call.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Formspree form -->
+          <form class="form card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            </div>
+
+            <div class="form-row">
+              <label for="company">Company (optional)</label>
+              <input id="company" name="company" type="text" placeholder="Company name" />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Briefly tell us what you need…" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send Inquiry</button>
+              <a class="btn btn-ghost" href="#call">Book a Call</a>
+            </div>
+
+          </form>
+
+        </div> <!-- /.contact-grid -->
+      </div> <!-- /.container -->
+    </section> <!-- /#contact -->
+
+    <footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Subscribe / Brand -->
+    <div class="footer-brand">
+      <img src="assets/Logos/720.png" alt="720 Digital Media" class="footer-logo">
+
+      <h4>Subscribe now</h4>
+      <p>Insights, launches, and creative updates from 720.</p>
+
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h4>SOCIAL MEDIA</h4>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </div>
+
+    <!-- Get in touch -->
+    <div class="footer-col">
+      <h4 class="contact-title">
+        <span class="phone-icon">📞</span>
+        Get in touch with
+      </h4>
+
+      <a href="tel:+254700000000" class="footer-phone">
+        +254 700 000 000
+      </a>
+
+      <a href="mailto:info@720digitalmedia.co.ke" class="footer-email">
+        info@720digitalmedia.co.ke
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    © 2026 720 Digital Media. All rights reserved.
+  </div>
+</footer>
+
+
+  <script>
+    // Year
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+    }
+
+    // Active nav link on scroll (simple)
+    const links = Array.from(document.querySelectorAll(".nav-link"));
+    const sections = links
+      .map(a => document.querySelector(a.getAttribute("href")))
+      .filter(Boolean);
+
+    const setActive = () => {
+      const y = window.scrollY + 120;
+      let currentId = "home";
+      for (const sec of sections) {
+        if (sec.offsetTop <= y) currentId = sec.id;
+      }
+      links.forEach(a => {
+        a.classList.toggle("active", a.getAttribute("href") === "#" + currentId);
+      });
+    };
+
+    window.addEventListener("scroll", setActive, { passive: true });
+    setActive();
+
+    // Close mobile nav when clicking a link
+    links.forEach(a => a.addEventListener("click", () => {
+      if (nav.classList.contains("open")) {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    }));
+  </script>
+
+  
+</body>
+</html>

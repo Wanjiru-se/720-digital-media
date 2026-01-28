@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>720 Digital Media | The Digital Powerhouse</title>
+  <meta name="description" content="720 Digital Media is a full-service digital agency where creativity, strategy, and technology connect to transform brands." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<script>
+  const track = document.getElementById("workTrack");
+  const prev = document.querySelector(".work-prev");
+  const next = document.querySelector(".work-next");
+
+  function cardWidth() {
+    const card = track.querySelector(".work-card");
+    const gap = 18; // must match CSS gap
+    return card ? card.getBoundingClientRect().width + gap : 340;
+  }
+
+  prev.addEventListener("click", () => {
+    track.scrollBy({ left: -cardWidth(), behavior: "smooth" });
+  });
+
+  next.addEventListener("click", () => {
+    track.scrollBy({ left: cardWidth(), behavior: "smooth" });
+  });
+</script>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <img src="Assets/Logos/720.png" alt="720 Digital Media" class="brand-logo">
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a class="btn btn-primary" href="#contact">Let’s Talk</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <main class="services-page">
+  <section class="subsidiaries" id="subsidiaries">
+  <div class="container">
+    <h2 class="section-title">
+        The <span class="highlight-720">720 </span>Ecosystem
+    </h2>
+
+    <div class="ecosystem-eyebrow">
+        HOW IT ALL CONNECTS
+    </div>
+
+    
+  </div>
+  </section>
+
+    <div class="subs-grid">
+      <!-- LEFT: stacked rows -->
+      <div class="subs-list">
+
+
+        <a class="subs-item" href="#music-lab">
+          <div class="subs-bullet" aria-hidden="true"></div>
+          <div class="subs-text">
+            <h3>720 Music Lab</h3>
+            <p>Artist Development — Music Production — Strategy & Partnerships</p>
+          </div>
+        </a>
+
+        <div class="subs-divider"></div>
+
+        <a class="subs-item" href="#tech">
+          <div class="subs-bullet" aria-hidden="true"></div>
+          <div class="subs-text">
+            <h3>720 Tech</h3>
+            <p>Platforms — Automation — Analytics — AI-powered Tools</p>
+          </div>
+        </a>
+
+      </div>
+
+     
+    </div>
+  </div>
+</section>
+<section class="product-lines" id="product-lines">
+  <div class="container">
+    <h1 class="section-title capabilities-title">Our Capabilities</h1>
+    <p class="section-subtitle">
+      Independent by design, powerful together
+    </p>
+
+    <div class="pl-grid">
+      <!-- 720 Studio -->
+      <a href="index.html#contact" class="pl-card" id="studio">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9 10h6M9 14h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>720 Studio</h3>
+        <p>Photography, video, design, and full-scale production built for modern platforms.</p>
+        
+      </article>
+
+      <!-- 720 Boost -->
+      <a href="index.html#contact" class="pl-card" id="boost">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+            <path d="M12 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 15v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M3 12h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M15 12h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>720 Boost</h3>
+        <p>Data-driven digital campaigns that amplify visibility and conversions.</p>
+        
+    </a>
+
+      <!-- 720 Rank -->
+      <a href="index.html#contact" class="pl-card" id="rank">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+            <path d="M4 19h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M6 17l4-6 3 4 5-8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>720 Rank</h3>
+        <p>SEO, web optimization, and performance improvements that help you rank higher.</p>
+        
+    </a>
+
+      <!-- 720 Engage -->
+      <a href="index.html#contact" class="pl-card" id="engage">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+            <path d="M7 17c4 3 10 2 13-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4 7c3-4 10-5 15-1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M9 12h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>720 Engage</h3>
+        <p>Social media strategy, content, and community that builds loyal audiences.</p>
+        
+    </a>
+
+      <!-- 720 Network -->
+      <a href="index.html#contact" class="pl-card" id="network">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+            <circle cx="7" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="17" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="17" cy="17" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9 11l6-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M9 13l6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>720 Network</h3>
+        <p>Affiliate and influencer marketing that connects brands with voices that convert.</p>
+        
+    </a>
+
+      <!-- 720 Learn -->
+      <a href="index.html#contact" class="pl-card" id="learn">
+        <div class="pl-icon">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+            <path d="M4 7l8-3 8 3-8 3-8-3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M6 10v6c0 1 3 3 6 3s6-2 6-3v-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>720 Learn</h3>
+        <p>Workshops, masterclasses, and resources that empower creators and teams.</p>
+        
+    </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Subscribe / Brand -->
+    <div class="footer-brand">
+      <img src="assets/Logos/720.png" alt="720 Digital Media" class="footer-logo">
+
+      <h4>Subscribe now</h4>
+      <p>Insights, launches, and creative updates from 720.</p>
+
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h4>SOCIAL MEDIA</h4>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </div>
+
+    <!-- Get in touch -->
+    <div class="footer-col">
+      <h4 class="contact-title">
+        <span class="phone-icon">📞</span>
+        Get in touch with
+      </h4>
+
+      <a href="tel:+254700000000" class="footer-phone">
+        +254 700 000 000
+      </a>
+
+      <a href="mailto:info@720digitalmedia.co.ke" class="footer-email">
+        info@720digitalmedia.co.ke
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    © 2026 720 Digital Media. All rights reserved.
+  </div>
+</footer>
+
+
+
+</main>
+</body>
+</html>
