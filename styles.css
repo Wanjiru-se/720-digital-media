@@ -382,6 +382,7 @@ input:focus, textarea:focus{
 }
 
 .section-title {
+  text-align: center;
   font-size: clamp(2rem, 3vw, 2.6rem);
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -1246,3 +1247,469 @@ html {
 #contact {
   scroll-margin-top: 120px;
 }
+
+/* About Intro (NEW) */
+/* About intro — more dramatic */
+.about-intro{
+  max-width: 1020px;
+  margin: 0 0 40px;
+  padding: 28px 26px 18px;
+  border-left: 2px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.18);
+  border-radius: 18px;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+}
+
+
+.about-kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  opacity: 0.9;
+  margin: 0 0 16px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+}
+
+/* tiny red dot like the ecosystem bullets */
+.about-kicker::before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(220, 38, 38, 0.95);
+  box-shadow: 0 0 18px rgba(220, 38, 38, 0.35);
+}
+
+
+.about-headline{
+  margin: 0 0 16px;
+  font-size: clamp(2.1rem, 3.2vw, 3.1rem);
+  line-height: 1.03;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.about-lead:last-of-type{
+  margin-bottom: 18px;
+}
+
+.about-chips{
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+
+.about-lead {
+  margin: 0 0 12px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  opacity: 0.88;
+}
+
+/* Optional: tighten the existing subtitle spacing since we added an intro */
+.work-slider-section .section-subtitle {
+  margin-top: 18px;
+}
+
+/* Make the intro feel like a manifesto */
+.about-intro {
+  margin-top: 60px;
+  max-width: 980px;
+  margin: 0 0 28px;
+  padding: 18px 18px 0;
+  border-left: 2px solid rgba(255,255,255,0.12);
+}
+
+.about-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: 0.9;
+}
+
+/* Proof chips */
+.about-chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.chip{
+  font-size: 0.88rem;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  opacity: 0.92;
+  backdrop-filter: blur(10px);
+}
+/* Section spacing divider (luxury breathing space) */
+.about-divider{
+  margin-top: clamp(48px, 8vw, 90px);  /* the “space” before the whole slider block */
+  padding-top: clamp(28px, 5vw, 60px); /* 👈 this pushes the subtitle down INSIDE the slider */
+}
+
+/* Slider intro text */
+.slider-intro {
+  margin-top: 0;
+  margin-bottom: 28px;
+  max-width: 600px;
+  opacity: 0.8;
+}
+
+/* Red highlight for key words */
+.highlight {
+  color: #dc2626; /* your brand red */
+  font-weight: 600;
+}
+
+/* =========================
+   MUSIC LAB PILLARS (dramatic)
+   ========================= */
+
+.ml-pillars{
+  padding: 70px 0 110px;
+}
+
+.ml-pillars-kicker{
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin: 0 0 28px;
+}
+
+.ml-pillars-list{
+  display: grid;
+  gap: 26px;
+}
+
+.ml-pillar{
+  position: relative;
+  padding-left: 56px; /* room for the cut-off card */
+}
+
+.ml-pillar-text h2{
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  line-height: 1.02;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.ml-pillar-text p{
+  margin: 10px 0 0;
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+.ml-line{
+  margin-top: 22px;
+  height: 1px;
+  width: min(880px, 100%);
+  background: linear-gradient(90deg,
+    rgba(220,38,38,0.0),
+    rgba(220,38,38,0.45),
+    rgba(255,255,255,0.10)
+  );
+  opacity: 0.9;
+}
+
+/* The “incomplete card” accent */
+.ml-peek{
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 42px;
+  height: 64px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background:
+    radial-gradient(120px 80px at 60% 20%, rgba(220,38,38,0.22), transparent 65%),
+    rgba(255,255,255,0.04);
+  box-shadow: 0 18px 70px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* Make it feel “cut off” + more designed */
+.ml-peek::before{
+  content:"";
+  position:absolute;
+  left: -14px;
+  top: 12px;
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  opacity: 0.55;
+}
+
+.ml-peek::after{
+  content:"";
+  position:absolute;
+  right: -22px;
+  bottom: -22px;
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  background: rgba(220,38,38,0.18);
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+/* Subtle hover: feels premium */
+.ml-pillar:hover .ml-peek{
+  border-color: rgba(220,38,38,0.35);
+}
+.ml-pillar:hover .ml-line{
+  background: linear-gradient(90deg,
+    rgba(220,38,38,0.0),
+    rgba(220,38,38,0.65),
+    rgba(255,255,255,0.10)
+  );
+}
+
+/* Scale up Music Lab pillars typography */
+.ml-pillars .subs-text h2 {
+  font-size: 45px;        /* adjust: 42–48px sweet spot */
+  line-height: 1.15;
+}
+
+.ml-pillars .subs-text p {
+  font-size: 17px;
+  margin-top: 8px;
+}
+
+/* Space after 720 Tech before Contact section */
+.subs-tech {
+  margin-bottom: 160px;
+}
+
+/* ===== 720 CTA Card ===== */
+.cta720 {
+  padding: 70px 0;
+}
+
+.cta720-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  padding: 52px 56px;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  /* 720 theme background */
+  background:
+    radial-gradient(900px 400px at 75% 30%, rgba(180, 0, 35, 0.35), transparent 60%),
+    radial-gradient(700px 420px at 30% 70%, rgba(255, 0, 60, 0.18), transparent 55%),
+    linear-gradient(180deg, rgba(18, 18, 18, 0.96), rgba(10, 10, 10, 0.96));
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.cta720-content {
+  max-width: 650px;
+}
+
+.cta720 h2 {
+  margin: 0 0 14px;
+  font-size: clamp(34px, 4vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  color: #fff;
+}
+
+.cta720 p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 560px;
+}
+
+/* Button */
+.cta720-btn {
+  position: absolute;
+  right: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.cta720-btn:hover {
+  transform: translateY(-50%) scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cta720-btn:active {
+  transform: translateY(-50%) scale(0.99);
+}
+
+/* Scribble accents */
+.cta720-scribble {
+  position: absolute;
+  width: 280px;
+  height: 120px;
+  opacity: 0.22;
+  filter: blur(0.2px);
+  background:
+    repeating-linear-gradient(
+      10deg,
+      rgba(255, 0, 60, 0.9) 0px,
+      rgba(255, 0, 60, 0.9) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.cta720-scribble--tl {
+  top: -38px;
+  left: -30px;
+  transform: rotate(-8deg);
+}
+
+.cta720-scribble--br {
+  bottom: -42px;
+  right: -34px;
+  transform: rotate(12deg);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cta720-card {
+    padding: 42px 26px;
+  }
+
+  .cta720-btn {
+    position: static;
+    transform: none;
+    margin-top: 22px;
+  }
+
+  .cta720-btn:hover,
+  .cta720-btn:active {
+    transform: none;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Home services teaser (lighter pl-card variant) ===== */
+.services-teaser {
+  padding: 90px 0;
+}
+
+.services-teaser-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.pl-card--tease {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 22px 24px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: background 180ms ease, transform 180ms ease, border-color 180ms ease;
+}
+
+.pl-card--tease:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+/* tighten typography */
+.pl-card--tease h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.pl-card--tease p {
+  font-size: 14.5px;
+  margin-top: 6px;
+  opacity: 0.75;
+}
+
+/* icon slightly smaller */
+.pl-card--tease .pl-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+/* CTA */
+.services-teaser-cta {
+  margin-top: 28px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+section[id] {
+  scroll-margin-top: 110px; /* match navbar height */
+}
+
+#about h2 {
+  margin-bottom: 100px;
+}
+
+section[id] { scroll-margin-top: 110px; }
+

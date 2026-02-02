@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>720 Digital Media | The Digital Powerhouse</title>
+  <meta name="description" content="720 Digital Media is a full-service digital agency where creativity, strategy, and technology connect to transform brands." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<script>
+  const track = document.getElementById("workTrack");
+  const prev = document.querySelector(".work-prev");
+  const next = document.querySelector(".work-next");
+
+  function cardWidth() {
+    const card = track.querySelector(".work-card");
+    const gap = 18; // must match CSS gap
+    return card ? card.getBoundingClientRect().width + gap : 340;
+  }
+
+  prev.addEventListener("click", () => {
+    track.scrollBy({ left: -cardWidth(), behavior: "smooth" });
+  });
+
+  next.addEventListener("click", () => {
+    track.scrollBy({ left: cardWidth(), behavior: "smooth" });
+  });
+</script>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <img src="Assets/Logos/720.png" alt="720 Digital Media" class="brand-logo">
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#home" class="nav-link active">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a class="btn btn-primary" href="#contact">Let’s Talk</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- MUSIC LAB HERO CARD -->
+   <!-- MUSIC LAB PILLARS -->
+
+<section class="ml-pillars" id="pillars">
+  <div class="container">
+    <p class="ml-pillars-kicker">720 Music Lab</p>
+
+    <div class="ml-pillars-list">
+
+      <div class="ml-pillar">
+        <div class="ml-peek" aria-hidden="true"></div>
+
+        <div class="subs-text">
+          <h2>Artist Development</h2>
+          <p>Direction — positioning — growth</p>
+        </div>
+
+        <div class="ml-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="ml-pillar">
+        <div class="ml-peek" aria-hidden="true"></div>
+
+        <div class="subs-text">
+          <h2>Brand Strategy</h2>
+          <p>Identity — story — rollout</p>
+        </div>
+
+        <div class="ml-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="ml-pillar">
+        <div class="ml-peek" aria-hidden="true"></div>
+
+        <div class="subs-text">
+          <h2>Music Production</h2>
+          <p>Sound — creative direction — execution</p>
+        </div>
+
+        <div class="ml-line" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="collabs" id="collabs" aria-label="Selected collaborations and clients">
+  <div class="collabs-inner">
+
+    <header class="collabs-header">
+      <h2>Who we've worked with</h2>
+    </header>
+
+    <div class="collabs-divider" aria-hidden="true"></div>
+
+    <!-- Logo wall -->
+    <div class="logo-wall" role="list" aria-label="Client logos">
+      <!-- If you have real logos, replace these with <img> tags -->
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/bbc.png" alt="BBC" class="logo-img">
+      </div>
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/spotify.png" alt="Spotify" class="logo-img">
+      </div>
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/koda.png" alt="Koda" class="logo-img logo-lg">
+      </div>
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/gondwanakomplex.png" alt="Gondwanakomplex" class="logo-img logo-lg">
+      </div>
+      <div class="logo-chip" role="listitem">
+        <img src="assets/logos/descendants2.jpg" alt="descendants" class="logo-img logo-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta720" aria-label="Call to action">
+  <div class="cta720-card">
+    <div class="cta720-content">
+      <h2>Let’s Shape Your Sound & Story.</h2>
+      <p>
+        We support artists through development, strategy, and production —
+        turning talent into presence, and vision into momentum
+
+      </p>
+    </div>
+
+    <a class="cta720-btn" href="index.html#contact">Connect With Us</a>
+
+    <!-- subtle scribble accents (pure CSS) -->
+    <span class="cta720-scribble cta720-scribble--tl" aria-hidden="true"></span>
+    <span class="cta720-scribble cta720-scribble--br" aria-hidden="true"></span>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Subscribe / Brand -->
+    <div class="footer-brand">
+      <img src="assets/Logos/720.png" alt="720 Digital Media" class="footer-logo">
+
+      <h4>Subscribe now</h4>
+      <p>Insights, launches, and creative updates from 720.</p>
+
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h4>SOCIAL MEDIA</h4>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </div>
+
+    <!-- Get in touch -->
+    <div class="footer-col">
+      <h4 class="contact-title">
+        <span class="phone-icon">📞</span>
+        Get in touch with
+      </h4>
+
+      <a href="tel:+254700000000" class="footer-phone">
+        +254 700 000 000
+      </a>
+
+      <a href="mailto:info@720digitalmedia.co.ke" class="footer-email">
+        info@720digitalmedia.co.ke
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    © 2026 720 Digital Media. All rights reserved.
+  </div>
+</footer>
+
+
+  
