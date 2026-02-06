@@ -44,7 +44,12 @@
         <a class="btn btn-primary" href="#contact">Let’s Talk</a>
       </nav>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+   
     </div>
   </header>
 
@@ -57,7 +62,8 @@
         <div>
           <p class="kicker">The Digital Powerhouse</p>
           <h1>Twice the perspective.<br>
-              Twice the creativity. Real results.</h1>
+              Twice the creativity. <br>
+              Real results.</h1>
           <p class="hero-subtext">
             We help ideas move, scale, and connect.
           </p>
@@ -97,7 +103,7 @@
       <div class="about-chips">
         <span class="chip">Headquartered in Nairobi</span>
         <span class="chip">Global outlook</span>
-        <span class="chip">Beyond Complete (720°)</span>
+        <span class="chip">Beyond Complete</span>
         </div>
 
     </div>
@@ -334,7 +340,7 @@
       <img src="assets/Logos/720.png" alt="720 Digital Media" class="footer-logo">
 
       <h4>Subscribe now</h4>
-      <p>Insights, launches, and creative updates from 720.</p>
+      <p>Insights, launches, and creative updates from 720 digital media.</p>
 
       <form class="subscribe-form">
         <input type="email" placeholder="Your email" required>
@@ -342,15 +348,56 @@
       </form>
     </div>
 
-    <!-- Social Media -->
     <div class="footer-col">
-      <h4>SOCIAL MEDIA</h4>
-      <ul class="footer-links">
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">TikTok</a></li>
-      </ul>
-    </div>
+  <h4>SOCIAL MEDIA</h4>
+
+  <div class="footer-socials">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/720digitalmedia?igsh=MWM4OHd3MXF1ZmxvZA=="
+       target="_blank"
+       rel="noopener"
+       aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"
+              fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="4"
+                fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/720-digital-media-kenya/"
+       target="_blank"
+       rel="noopener"
+       aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="2" ry="2"
+              fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="7" y1="10" x2="7" y2="17"
+              stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="7" cy="7" r="1" fill="currentColor"/>
+        <path d="M11 17v-4a2 2 0 0 1 4 0v4"
+              fill="none" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@720digitalmedia?_r=1&_t=ZS-93gvgi8AObF"
+       target="_blank"
+       rel="noopener"
+       aria-label="TikTok">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3v10a3 3 0 1 1-2-2.83"
+              fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12 3a6 6 0 0 0 6 6"
+              fill="none" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+
 
     <!-- Get in touch -->
     <div class="footer-col" id="contact-footer">
@@ -377,50 +424,6 @@
   </div>
 </footer>
 
-
-  <script>
-    // Year
-    const yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    // Mobile menu toggle
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.querySelector(".nav");
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
-      });
-    }
-
-    // Active nav link on scroll (simple)
-    const links = Array.from(document.querySelectorAll(".nav-link"));
-    const sections = links
-      .map(a => document.querySelector(a.getAttribute("href")))
-      .filter(Boolean);
-
-    const setActive = () => {
-      const y = window.scrollY + 120;
-      let currentId = "home";
-      for (const sec of sections) {
-        if (sec.offsetTop <= y) currentId = sec.id;
-      }
-      links.forEach(a => {
-        a.classList.toggle("active", a.getAttribute("href") === "#" + currentId);
-      });
-    };
-
-    window.addEventListener("scroll", setActive, { passive: true });
-    setActive();
-
-    // Close mobile nav when clicking a link
-    links.forEach(a => a.addEventListener("click", () => {
-      if (nav.classList.contains("open")) {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
-    }));
-  </script>
 
 <script>
   const sections = document.querySelectorAll("section[id]");
@@ -450,6 +453,39 @@
 
   sections.forEach(s => observer.observe(s));
 </script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
+
+  if (!toggle || !nav) return;
+
+  function closeMenu() {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && e.target !== toggle) closeMenu();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) closeMenu();
+  });
+});
+</script>
+
 
   
 </body>
