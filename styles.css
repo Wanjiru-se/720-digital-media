@@ -1903,4 +1903,12 @@ section[id] { scroll-margin-top: 110px; }
   gap: 10px;
 }
 
+/* Show line breaks on desktop */
+.br-desktop { display: inline; }
+
+/* Hide those line breaks on mobile */
+@media (max-width: 600px){
+  .br-desktop { display: none; }
+}
+
 
