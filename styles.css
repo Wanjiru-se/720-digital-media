@@ -1911,4 +1911,8 @@ section[id] { scroll-margin-top: 110px; }
   .br-desktop { display: none; }
 }
 
+.hero-title .line{
+  display: block;
+}
+
 
